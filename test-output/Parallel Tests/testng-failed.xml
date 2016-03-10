@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Parallel Tests]" parallel="tests">
+  <parameter name="platform" value="Windows"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="http://localhost:8080/WebPenny/index.jsp"/>
+  <parameter name="version" value="42.0.2311.135 m"/>
+  <test name="Windows+Chrome Test(failed)" parallel="tests">
+    <parameter name="platform" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://localhost:8080/WebPenny/index.jsp"/>
+    <parameter name="version" value="42.0.2311.135 m"/>
+    <classes>
+      <class name="com.haiberg.automation.apps.client.testcases.OpenComfirmationRequestFF">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup2"/>
+          <include name="setup2"/>
+          <include name="CheckOpenComfirmationRequestTaskFF" invocation-numbers="0"/>
+          <include name="setup1"/>
+          <include name="setup1"/>
+        </methods>
+      </class> <!-- com.haiberg.automation.apps.client.testcases.OpenComfirmationRequestFF -->
+    </classes>
+  </test> <!-- Windows+Chrome Test(failed) -->
+  <test name="Windows+Firefox Test(failed)" parallel="tests">
+    <parameter name="platform" value="Windows"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="http://localhost:8080/WebPenny/index.jsp"/>
+    <parameter name="version" value="37.0.2"/>
+    <classes>
+      <class name="com.haiberg.automation.apps.client.testcases.OpenComfirmationRequestFF">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup2"/>
+          <include name="setup2"/>
+          <include name="CheckOpenComfirmationRequestTaskFF" invocation-numbers="0"/>
+          <include name="setup1"/>
+          <include name="setup1"/>
+        </methods>
+      </class> <!-- com.haiberg.automation.apps.client.testcases.OpenComfirmationRequestFF -->
+    </classes>
+  </test> <!-- Windows+Firefox Test(failed) -->
+</suite> <!-- Failed suite [Parallel Tests] -->

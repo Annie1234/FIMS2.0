@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Default suite">
+
+<!-- Default suite -->
+
+ 
+ <test name="QuickAccess test" verbose="1" preserve-order="true">
+
+   
+    
+    <classes>
+    
+       <class name="com.haiberg.automation.apps.client.testcases.UserLogin"/>
+       <class name="com.haiberg.automation.apps.client.testcases.KIKOpenANewStore01"/>
+      <!-- <class name="com.haiberg.automation.apps.client.testcases.MPOpenTicketFromKIK02"/> -->
+   	  <!-- <class name="com.haiberg.automation.apps.client.testcases.KIKReceivedMPTicket03"/> -->
+	  <!-- <class name="com.haiberg.automation.apps.client.testcases.MPBookKIKTicket04"/> -->
+	  <!-- <class name="com.haiberg.automation.apps.client.testcases.KIKBookP2Ticket05"/> -->
+	  <!-- <class name="com.haiberg.automation.apps.client.testcases.MPChecktheClosedTicket06"/> -->
+	 </classes>
+
+ </test>
+
+<!-- Default test -->
+
+
+</suite>

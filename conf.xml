@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Tests" verbose="1" thread-count="2" parallel="tests">
+
+<tests>
+  <test name="Windows+Firefox Test">
+        <parameters>
+          <parameter name="platform" value="Windows" />
+          <parameter name="browser" value="firefox" />
+          <parameter name="version" value="37.0.2" />
+          <parameter name="url" value="http://localhost:8080/WebPenny/index.jsp"/>
+        </parameters>
+        
+         <classes>
+           <class name="com.haiberg.automation.apps.client.testcases.OpenComfirmationRequestFF" />
+        </classes>
+      </test>
+      
+  <test name="Windows+Chrome Test">
+
+        <parameters>
+          <parameter name="platform" value="Windows" />
+          <parameter name="browser" value="chrome" />
+          <parameter name="version" value="42.0.2311.135 m" />
+          <parameter name="url" value="http://localhost:8080/WebPenny/index.jsp"/>
+        </parameters>
+        
+         <classes>
+           <class name="com.haiberg.automation.apps.client.testcases.OpenComfirmationRequestFF" />
+        </classes>
+        
+  </test>
+ </tests>
+</suite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="UserLogin_001(failed)">
+    <classes>
+      <class name="com.haiberg.automation.apps.client.testcases.UserLogin_001">
+        <methods>
+          <include name="setup1"/>
+          <include name="UserLogin"/>
+        </methods>
+      </class> <!-- com.haiberg.automation.apps.client.testcases.UserLogin_001 -->
+    </classes>
+  </test> <!-- UserLogin_001(failed) -->
+</suite> <!-- Failed suite [Suite] -->

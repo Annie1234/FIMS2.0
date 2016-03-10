@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<project basedir="." name="automation test" default="regression">
+	<!-- properies -->
+	<property name="base.dir" value="H:/Annieworkspace/ZOEIIAuto" />
+	<property name="testng.output.dir" value="${base.dir}/test-output"/>
+   	<property name="3rd.lib.dir" value="${base.dir}/libs"/>
+   	<property name="testng.file" value="testng.xml"/>
+
+
+	<taskdef resource="testngtasks" classpath="${3rd.lib.dir}/testng-5.12.jar"/>
+ 
+        <target name="clean">
+  		   <delete dir="${base.dir}/bin"/>
+        </target>
+  	  <target name="compile" depends="clean">
+       		  <mkdir dir="${base.dir}/bin"/>
+      		  <javac includeantruntime="false" srcdir="${base.dir}/src" encoding="UTF-8"  destdir="${base.dir}/bin" >
+  	  		  <classpath refid="classes"/>
+      		  	</javac>
+  	  </target>
+ 
+    	<path id="classes">
+      		  <fileset dir="${3rd.lib.dir}" includes="*jar"/>
+      		  <fileset dir="${3rd.lib.dir}" includes="*zip"/>
+     		   <pathelement location="${base.dir}/bin"/>
+    	</path>
+ 
+   	 <target name="regression" depends="compile">
+   		  <testng outputdir="${testng.output.dir}" classpathref="classes" delegateCommandSystemProperties="false">
+     		  <xmlfileset dir="${base.dir}" includes="${testng.file}"/>
+          </testng>
+    </target>
+</project>
